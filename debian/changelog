@@ -1,4 +1,4 @@
-containers-image (3.0.0-1~ubuntu19.04~ppa1) disco; urgency=medium
+containers-image (3.0.0-1~ubuntu18.04~ppa1) bionic; urgency=medium
 
   * first build v3.0.0
 
