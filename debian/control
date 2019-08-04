@@ -1,0 +1,16 @@
+Source: containers-image
+Section: devel
+Priority: optional
+Maintainer: Lokesh Mandvekar <lsm5@fedoraproject.org>
+Build-Depends: debhelper (>=9),
+    rsync,
+    dh-golang,
+    golang,
+    go-md2man
+Standards-Version: 3.9.6
+Homepage: https://github.com/projectatomic/skopeo
+
+Package: containers-image
+Architecture: all
+Depends: ${misc:Depends}, ${shlibs:Depends},
+Description: Configuration files for working with image signatures.
