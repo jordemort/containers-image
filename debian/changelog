@@ -1,0 +1,6 @@
+containers-image (3.0.0-1~ubuntu19.04~ppa1) disco; urgency=medium
+
+  * first build v3.0.0
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Sun, 28 Jul 2019 21:49:03 +0000
+
