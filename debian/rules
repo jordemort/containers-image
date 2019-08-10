@@ -1,28 +1,9 @@
 #!/usr/bin/make -f
-# See debhelper(7) (uncomment to enable)
-# output every command that modifies files on the build system.
-#export DH_VERBOSE = 1
 
-
-# see FEATURE AREAS in dpkg-buildflags(1)
-#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-
-# see ENVIRONMENT in dpkg-buildflags(1)
-# package maintainers to append CFLAGS
-#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-# package maintainers to append LDFLAGS
-#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
-
-export DH_VERBOSE=1
-export DH_GOPKG := github.com/containers/skopeo
-# Include test fixtures.
-#export DH_GOLANG_INSTALL_EXTRA := discovery/file/fixtures \
-    storage/local/fixtures config/testdata promql/testdata retrieval/testdata \
-    promql/fuzz-data
-# Do not build examples.
-#export DH_GOLANG_EXCLUDES := documentation vendor
-export GO := /usr/bin/go
-export UPSTREAM_TAG=v3.0.0
+DH_VERBOSE=1
+DH_GOPKG := github.com/containers/skopeo
+GO := /usr/bin/go
+UPSTREAM_TAG=v3.0.0
 
 # Lots of shameless copy-paste from the debian package for prometheus
 
