@@ -3,7 +3,7 @@
 DH_VERBOSE=1
 DH_GOPKG := github.com/containers/skopeo
 GO := /usr/bin/go
-UPSTREAM_TAG=v3.0.0
+UPSTREAM_TAG=v3.0.2
 
 # Lots of shameless copy-paste from the debian package for prometheus
 
