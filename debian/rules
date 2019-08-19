@@ -6,7 +6,7 @@ GO := /usr/bin/go
 UPSTREAM_TAG=v3.0.2
 
 BUILDDIR := $(shell pwd)
-DESTDIR := $(BUILDDIR)/debian/tmp-build/containers-image
+DESTDIR := $(BUILDDIR)
 CONTAINERSSYSCONFIGDIR := $(DESTDIR)/etc/containers
 REGISTRIESDDIR := $(CONTAINERSSYSCONFIGDIR)/registries.d
 
