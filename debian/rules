@@ -6,8 +6,7 @@ GO := /usr/bin/go
 UPSTREAM_TAG=v3.0.2
 
 BUILDDIR := $(shell pwd)
-DESTDIR := $(BUILDDIR)/debian/tmp
-CONTAINERSSYSCONFIGDIR := $(DESTDIR)/etc/containers
+CONTAINERSSYSCONFIGDIR := debian/containers-image/etc/containers
 REGISTRIESDDIR := $(CONTAINERSSYSCONFIGDIR)/registries.d
 
 CURRENT_VERSION = $(shell dpkg-parsechangelog --show-field Version | sed -e 's/-.*//')
@@ -34,5 +33,5 @@ override_dh_auto_test:
 
 override_dh_auto_install:
 	install -dp $(CONTAINERSSYSCONFIGDIR)
-	make GO_MD2MAN=go-md2man PREFIX=$(DESTDIR)/usr install-docs
+	make GO_MD2MAN=go-md2man PREFIX=debian/containers-image/usr install-docs
 	install -m0644 $(BUILDDIR)/registries.conf $(CONTAINERSSYSCONFIGDIR)
